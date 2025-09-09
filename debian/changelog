@@ -1,3 +1,9 @@
+golang-github-templexxx-cpu (0.1.0-1deepin1) unstable; urgency=medium
+
+  * Add support for sw64.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Tue, 09 Sep 2025 22:58:27 +0800
+
 golang-github-templexxx-cpu (0.1.0-1) unstable; urgency=medium
 
   * New upstream version 0.1.0

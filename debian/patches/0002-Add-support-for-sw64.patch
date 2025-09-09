@@ -1,0 +1,38 @@
+From: Tianyu Chen <sweetyfish@deepin.org>
+Date: Tue, 9 Sep 2025 22:56:35 +0800
+Subject: Add support for sw64
+
+---
+ cpu_no_init.go |  1 +
+ cpu_sw64.go    | 10 ++++++++++
+ 2 files changed, 11 insertions(+)
+ create mode 100644 cpu_sw64.go
+
+diff --git a/cpu_no_init.go b/cpu_no_init.go
+index 9a93e02..ca438f7 100644
+--- a/cpu_no_init.go
++++ b/cpu_no_init.go
+@@ -11,6 +11,7 @@
+ // +build !ppc64le
+ // +build !riscv64
+ // +build !s390x
++// +build !sw64
+ 
+ package cpu
+ 
+diff --git a/cpu_sw64.go b/cpu_sw64.go
+new file mode 100644
+index 0000000..824aacc
+--- /dev/null
++++ b/cpu_sw64.go
+@@ -0,0 +1,10 @@
++// Copyright 2018 The Go Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style
++// license that can be found in the LICENSE file.
++
++package cpu
++
++const CacheLineSize = 128
++
++func doinit() {
++}
